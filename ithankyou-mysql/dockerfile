@@ -1,0 +1,14 @@
+FROM mysql
+
+MAINTAINER gzuniga@itexico.net
+
+#The Passwords are temporal.  Please change them
+ENV MYSQL_ROOT_PASSWORD=legoBatman
+
+ENV MYSQL_DATABASE=iThankYou
+ENV MYSQL_USER=service
+ENV MYSQL_PASSWORD=ironmansucks
+
+COPY 01_create_db.sql /docker-entrypoint-initdb.d/
+
+EXPOSE 3306
