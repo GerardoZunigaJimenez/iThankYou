@@ -12,6 +12,7 @@ func main() {
 
 	r.Handle("/favicon.ico", http.NotFoundHandler())
 	r.HandleFunc("/user/{email}", service.GetUserByEmail).Methods("GET")
+	r.HandleFunc("/user", service.CreateUser).Methods("POST")
 
 	err := http.ListenAndServe(":8080", r)
 	if err != nil {

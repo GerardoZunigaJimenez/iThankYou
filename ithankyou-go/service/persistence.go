@@ -2,6 +2,7 @@ package service
 
 import (
 	"database/sql"
+	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 	"log"
 )
@@ -29,7 +30,6 @@ func createConnection() {
 }
 
 func FetchUserByEmail(email string) User {
-	// data to be used in query
 	var u User
 
 	createConnection()
@@ -51,4 +51,19 @@ func FetchUserByEmail(email string) User {
 		}
 	}
 	return u
+}
+
+func CreateNewUser(u User) {
+	createConnection()
+	defer db.Close()
+
+	s := fmt.Sprintf(" '%v', '%v', '%v', ", u.LastName, u.FirstName, u.Email)
+	q := `insert into users(last_name, first_name, email, createdAt, updatedAt) values ( ` + s + `CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());`
+
+	rows, err := db.Query(q)
+	if err != nil {
+		log.Println("problem to execute the query", err)
+		return
+	}
+	defer rows.Close()
 }
