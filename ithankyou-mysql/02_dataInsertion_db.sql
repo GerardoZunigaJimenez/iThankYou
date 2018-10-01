@@ -1,0 +1,3 @@
+insert into users(last_name, first_name, email, createdAt, updatedAt) values ('Zuniga','Gerardo','gzuniga@itexico.net',CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP() );
+insert into users(last_name, first_name, email, createdAt, updatedAt) values ('macias','Jesus','jmacias@itexico.net',CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());
+insert into users(last_name, first_name, email, createdAt, updatedAt) values ('Noguez','Alfonso','anoguez@itexico.net',CURRENT_TIMESTAMP(),CURRENT_TIMESTAMP());

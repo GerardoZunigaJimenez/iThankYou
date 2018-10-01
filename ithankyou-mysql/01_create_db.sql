@@ -53,10 +53,9 @@ CREATE TABLE IF NOT EXISTS `iThankYou`.`users` (
   `user_id` INT NOT NULL AUTO_INCREMENT,
   `last_name` VARCHAR(100) NOT NULL,
   `first_name` VARCHAR(100) NOT NULL,
-  `hashpassword` VARCHAR(100) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   `createdAt` DATETIME NOT NULL,
-  `updatedAt` VARCHAR(45) NULL,
+  `updatedAt` DATETIME NULL,
   PRIMARY KEY (`user_id`))
 ENGINE = InnoDB;
 
