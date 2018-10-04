@@ -1,6 +1,6 @@
 # ithankyou-ui
 
-> iTexico Application used to give awards and recognition for its employees
+> A Vue.js project
 
 ## Build Setup
 
@@ -19,3 +19,10 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+
+REFS:
+
+https://github.com/angelouz/vue-docker-example
+https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
