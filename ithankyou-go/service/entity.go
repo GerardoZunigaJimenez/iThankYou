@@ -1,10 +1,10 @@
 package service
 
 type User struct {
-	UserId    int
-	LastName  string
-	FirstName string
-	Email     string
-	CreatedAt string
-	UpdatedAt string
+	UserId    int    `json:"userId"`
+	LastName  string `json:"lastName"`
+	FirstName string `json:"firstName"`
+	Email     string `json:"email"`
+	CreatedAt string `json:"createdAt"`
+	UpdatedAt string `json:"updatedAt"`
 }

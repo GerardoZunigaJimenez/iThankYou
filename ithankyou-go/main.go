@@ -14,7 +14,7 @@ func main() {
 	r.HandleFunc("/user/{email}", service.GetUserByEmail).Methods("GET")
 	r.HandleFunc("/user", service.CreateUser).Methods("POST")
 
-	err := http.ListenAndServe(":8080", r)
+	err := http.ListenAndServe(":8081", r)
 	if err != nil {
 		log.Fatalln(err)
 	}
